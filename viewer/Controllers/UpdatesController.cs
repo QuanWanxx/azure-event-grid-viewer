@@ -102,7 +102,7 @@ namespace viewer.Controllers
                 "gridupdate",
                 gridEvent.Id,
                 gridEvent.EventType,
-                gridEvent.Subject,
+                gridEvent.Subject + DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK"),
                 gridEvent.EventTime.ToLongTimeString(),
                 jsonContent.ToString());
 
@@ -126,7 +126,7 @@ namespace viewer.Controllers
                     "gridupdate",
                     details.Id,
                     details.EventType,
-                    details.Subject,
+                    details.Subject + DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK"),
                     details.EventTime.ToLongTimeString(),
                     e.ToString());
             }
@@ -143,7 +143,7 @@ namespace viewer.Controllers
                 "gridupdate",
                 details.Id,
                 details.Type,
-                details.Subject,
+                details.Subject + DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK"),
                 details.Time,
                 eventData.ToString()
             );
